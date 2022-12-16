@@ -48,7 +48,7 @@ package main
  */
 val places =
     mutableListOf(mutableListOf(true, false, false, false, true, false), mutableListOf(true, false, true, false))
-val requests = mapOf("Вася" to Pair(0, 2), "Петя" to Pair(1, 1))
+val requests = mapOf("Вася" to Pair(0, 2), "Петя" to Pair(1, -1))
 
 fun main() {
     //println(places[0].filter { !it }.size)
@@ -78,6 +78,7 @@ fun theater(
     for ((key, value) in requests) {
         val row = value.first
         val seats = value.second
+        //if (seats < 0 || places[row].filter { !it }.size < seats) throw IllegalStateException()
         if (places[row].filter { !it }.size < seats) throw IllegalStateException()
         val preservedSeats = mutableListOf<Int>()
         //Заносим в список и

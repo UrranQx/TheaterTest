@@ -3,6 +3,8 @@ package main
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertThrows
+import org.junit.jupiter.api.Tag
+
 //import kotlin.math.abs
 
 class Test {
@@ -17,6 +19,7 @@ class Test {
         myFun()
     }*/
     @Test
+    @Tag("100")
     fun theater() {
 
         val places1 =
